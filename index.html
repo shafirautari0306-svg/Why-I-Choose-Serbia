@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why I Choose Serbia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffe4ec, #fff1f7, #f8e8ff);
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: #4b2240;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeDown 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      color: #831843;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #7a4b68;
+    }
+
+    .hero button {
+      margin-top: 35px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #ec4899, #d946ef);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .hero button:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 30px;
+      transition: 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      background: #ffe4f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      color: #be185d;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #7a4b68;
+      line-height: 1.7;
+    }
+
+    .motivation {
+      margin-top: 80px;
+      background: linear-gradient(135deg, #db2777, #a21caf);
+      color: white;
+      border-radius: 40px;
+      padding: 60px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 1s ease;
+    }
+
+    .motivation::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      right: -100px;
+      bottom: -100px;
+    }
+
+    .motivation h2 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+
+    .motivation p {
+      line-height: 1.9;
+      color: #ffe4f1;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .goals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 80px;
+      align-items: center;
+    }
+
+    .goals-text h2 {
+      font-size: 2.5rem;
+      color: #831843;
+      margin-bottom: 20px;
+    }
+
+    .goals-text p {
+      color: #7a4b68;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .goal-box {
+      background: white;
+      padding: 40px;
+      border-radius: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .goal-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      transition: 0.3s ease;
+    }
+
+    .goal-item:hover {
+      transform: translateX(8px);
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ec4899;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+
+      .motivation {
+        padding: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <section class="hero">
+      <h1>Why I Choose Serbia</h1>
+      <div style="margin-top:20px; font-size:1.1rem; color:#9d174d; font-weight:500; letter-spacing:1px;">
+        Scholarship Journey • Computer Science • International Dreams
+      </div>
+
+      <p>
+        Serbia represents more than just a destination for higher education to me.
+        It is a place where I can grow academically, experience a new culture,
+        and strengthen my knowledge in Computer Science and Information Technology.
+      </p>
+
+      <button onclick="scrollToSection()">Explore My Journey ✨</button>
+    </section>
+
+    <section class="cards" id="cards">
+
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h2>Quality Education</h2>
+        <p>
+          Serbian universities offer strong Computer Science and Software Engineering
+          programs with both theoretical and practical learning experiences.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌍</div>
+        <h2>International Environment</h2>
+        <p>
+          Studying in Serbia would allow me to meet people from different cultures
+          and develop a broader global perspective.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h2>Technology & Innovation</h2>
+        <p>
+          My interest in web development motivates me to continue building digital
+          solutions that are practical and accessible.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✨</div>
+        <h2>Personal Growth</h2>
+        <p>
+          Living and studying abroad would help me become more independent,
+          adaptable, and open-minded.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="motivation" id="motivation">
+      <h2>My Personal Motivation</h2>
+
+      <p>
+        Growing up in Indonesia, I realized that access to technology and digital
+        information is still limited in some communities. This inspired me to learn
+        web development independently and explore how technology can create meaningful impact.
+      </p>
+
+      <p>
+        By studying in Serbia, I hope to strengthen my technical skills,
+        gain international experience, and contribute to building more inclusive digital solutions.
+      </p>
+    </section>
+
+    <section class="goals">
+
+      <div class="goals-text">
+        <h2>My Future Goals</h2>
+
+        <p>
+          After completing my studies, I want to continue developing digital solutions
+          that improve access to information and technology for communities.
+        </p>
+
+        <p>
+          I believe Serbia can become an important part of my academic and personal journey.
+        </p>
+      </div>
+
+      <div class="goal-box">
+
+        <div class="goal-item">
+          <div class="dot"></div>
+          <p>Computer Science & Information Technology</p>
+        </div>
+
+        <div class="goal-item">
+          <div class="dot"></div>
+          <p>International Academic Experience</p>
+        </div>
+
+        <div class="goal-item">
+          <div class="dot"></div>
+          <p>Cross-Cultural Learning</p>
+        </div>
+
+        <div class="goal-item">
+          <div class="dot"></div>
+          <p>Building Inclusive Technology</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script>
+    function scrollToSection() {
+      document.getElementById('motivation').scrollIntoView({
+        behavior: 'smooth'
+      })
+    }
+
+    const cards = document.querySelectorAll('.card')
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('show')
+        }
+      })
+    }, {
+      threshold: 0.2
+    })
+
+    cards.forEach(card => {
+      observer.observe(card)
+    })
+  </script>
+
+</body>
+</html>
